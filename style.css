@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.swiper {
+  height: 100vh;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Backgrounds */
+.slide1 { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+.slide2 { background: #111; }
+.slide3 { background: #1a1a2e; }
+.slide4 { background: #16213e; }
+.slide5 { background: black; }
+
+/* Fonts */
+.script-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+}
+
+.typing {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  max-width: 320px;
+}
+
+/* Image */
+img {
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* Fade */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+.swiper-slide-active .fade {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Envelope */
+.envelope {
+  width: 200px;
+  height: 130px;
+  background: #ff4d6d;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 65px solid #ff758c;
+  top: -65px;
+  left: 0;
+  transition: 0.5s;
+}
+
+.envelope.open:before {
+  transform: rotateX(180deg);
+}
+
+/* Music button */
+#musicControl {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+/* Confetti */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
